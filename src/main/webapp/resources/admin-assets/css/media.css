@@ -1,0 +1,87 @@
+@media screen and (max-width: 1366px) {
+    
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+    
+/*==== result css start ====*/
+    .card-action.center-align {
+        padding: 15px 0;
+    }
+
+    .card .card-content .card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.14em !important;
+    }
+
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+        margin-right: 0;
+        padding: 0 15px;
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    body { font-size: 100%; }
+
+    nav .brand-logo {
+        font-size: 1.3rem;
+    }
+
+    nav .button-collapse {
+        float: right;
+    }
+
+    .mrg-box {
+        margin: 10% auto;
+    }
+    
+}
+
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    body { font-size: 100%; }
+
+    .table-box #example_filter {
+        width: 100%;
+    }
+
+    nav .brand-logo {
+        font-size: 1.2rem;
+    }
+
+    nav .button-collapse {
+        float: right;
+    }
+
+    .mrg-box {
+        margin: 6% auto;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+    body { font-size: 100%; }
+
+    .table-box #example_filter {
+        width: 100%;
+    }
+
+    nav .brand-logo {
+        font-size: 1.2rem;
+    }
+
+    nav .button-collapse {
+        float: right;
+        margin: 0;
+    }
+
+    .mrg-box {
+        margin: 15% auto;
+    }
+}

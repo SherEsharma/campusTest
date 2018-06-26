@@ -1,0 +1,543 @@
+/*========= index start =========
+
+1. header css
+    1.1 notifiction css
+2. sidebar css
+3. form css
+4. datatable css
+5. Modal css
+6. footer css
+
+========= index end =========*/
+
+
+/*======================== Dashboard Css start ================================*/
+
+/*======= main-wrapper ========*/
+.main-wrapper {
+    position: relative;
+    background: url(../../admin-assets/img/login-bg.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.main-wrapper:before {
+    background: rgba(218, 216, 216, 0.66) !important;
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+/*==== header css ====*/
+.custom-header {
+    margin-bottom: 0;
+    background: #d41920;
+    position: relative;
+}
+
+.custom-header .brand-logo {
+    padding: 0 15px;
+}
+
+    /* notification css */
+
+    .dropdown-button.notifications {
+        position: relative;
+    }
+
+    span.badge.notifi {
+        position: absolute;
+        right: 6px;
+        top: 10px;
+        padding: 5px 0px 0 0px;
+        width: 20px;
+        height: 20px;
+        line-height: 10px;
+        min-width: auto;
+        border-radius: 100%;
+        margin-left: 0;
+        text-align: center;
+        background: #555;
+        font-size: 0.6em;
+        color: #fff;
+    }
+
+    .notifications + .notifi-box {
+        width: 300px !important;
+    }
+
+    .collection.notifi-box a.collection-item {
+        color: #ccc;
+        font-size: 0.7em;
+        line-height: 15px;
+    }
+
+    .collection.notifi-box a.collection-item:not(.active):hover {
+        background-color: #ddd;
+        color: #555;
+    }
+
+    .collection.notifi-box .collection-item span {
+        font-size: 1.2em;
+        line-height: 1em;
+        display: block;
+        color: #d41920;
+    }
+
+    a.viwe-all {
+        position: relative;
+        text-align: center;
+        color: #000;
+        height: 34px;
+        line-height: 35px;
+    }
+
+/*==== sidebar css ====*/
+.sidebar-wrapper .side-nav {
+    width: 350px;
+    padding: 30px 0 !important;
+}
+
+.logo-box {
+    margin: 5% 0 10% !important;
+}
+
+
+/*======= total count css =======*/
+.total-count {
+    font-size: 1.44em;
+}
+
+.card-action h6 {
+    font-size: 1.2em;
+}
+
+.card-action .dib.text-black {
+    font-size: 1.1em;
+    color: #555 !important;
+}
+
+
+/*======= form css =======*/
+
+.mrg-box {
+    padding: 0% 15px;
+    /*background: #fff;*/
+    margin: 5% auto;
+    border-radius: 5px;
+}
+
+.table-box {
+    margin: 2% auto;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+
+.card-header {
+    background: #d41920;
+    float: left;
+    position: relative;
+    top: -5px;
+    margin: -20px 15px 0 !important;
+    border-radius: 3px;
+    padding: 15px !important;
+    color: #fff;
+}
+
+.card .card-content {
+    padding: 15px 30px;
+}
+
+.card-title {
+    font-family: 'roboto_slabbold';
+    color: #333;
+    padding-bottom: 30px !important;
+    font-size: 1.4em !important;
+    line-height: 15px !important;
+}
+
+.table-box label, .input-field label {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.await-box .divider {
+    margin: 3% 0;
+}
+
+
+/*====== Data table css =====*/
+.table-box #example_filter {
+    width: 50%;
+    float: right;
+    padding: 0 15px;
+}
+
+.table-box input.form-control.input-sm {
+    width: 50%;
+}
+
+.table-box div.dataTables_length select {
+    border: 1px solid #9e9e9e;
+}
+
+.table-box table tr th {
+    color: #333;
+    border-radius: 0;
+}
+
+.table-box .pagination li {
+    border-radius: 50%;
+}
+
+.table-box .pagination li.active {
+    background-color: #d41920;
+}
+
+.btn.btn-icon {
+    background: transparent;
+    color: #000;
+    box-shadow: none;
+}
+
+a.pass, 
+a .pass,
+.pass {
+    color: green;
+}
+
+a.fail, 
+a .fail,
+.fail {
+    color: red;
+}
+
+a.await, 
+a .await,
+.await {
+    color: orange;
+}
+
+.table-box button.dt-button, 
+.table-box div.dt-button, 
+.table-box a.dt-button {
+    border: 1px solid #807171;
+    color: white;
+    background-color: #807171;
+    background-image: none; 
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+
+.table-box button.dt-button:hover:not(.disabled), 
+.table-box div.dt-button:hover:not(.disabled), 
+.table-box a.dt-button:hover:not(.disabled) {
+    border: 1px solid #807171;
+    background-color: #ffffff;
+    background-image: none;
+    color: #807171;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+
+
+/*======= Modal Css ==========*/
+.modal-option {
+    margin: 5% 0;
+}
+
+.modal-option p {
+    margin: 2% 0 !important;
+}
+
+.modal {
+    width: 80%;
+}
+
+
+/*======= Footer Css ==========*/
+footer {
+    z-index: 9;
+    position: relative;
+}
+
+
+/*======================== Dashboard Css end ================================*/
+
+/*h4.card-title {
+    font-family: 'roboto_slablight';
+    font-weight: 100;
+}
+
+.card .header-primary-custom {
+    background: linear-gradient(60deg, #e32b24, #79130f);
+}
+
+.form-group.is-focused .form-control {
+    outline: none;
+    background-image: linear-gradient(#d32821, #881712), linear-gradient(#D2D2D2, #D2D2D2);
+    background-size: 100% 2px, 100% 1px;
+    box-shadow: none;
+    transition-duration: 0.3s;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check {
+    background: #d02620;
+}
+
+.btn.btn-primary.btn-simple {
+    color: #e4322b;
+}
+
+.btn.btn-primary.btn-simple:hover, .btn.btn-primary.btn-simple:focus {
+    background-color: transparent;
+    color: #e32c25;
+}
+
+.card.card-signup {
+    margin-bottom: 0;
+}
+
+.btn.btn-lg {
+    font-size: 14px;
+    padding: 10px 36px;
+    background-color: #d22720;
+}
+
+.btn.btn-primary, .btn.btn-primary:active, .btn.btn-primary:hover, .btn.btn-primary:focus {  
+    background-color: #9e1c16;
+    color: #FFFFFF;
+}
+
+.btn.btn-primary, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:active:focus {
+    background-color: #9e1c16;
+    color: #FFFFFF;
+}
+
+.card .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    padding: 16px 24px;
+}
+
+.card-signup .checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer ul li a {
+    padding: 5px 15px;
+}
+
+.question-box, .option-box {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.exam-box .radio input[type=radio]:checked ~ .circle {
+    border-color: #cf2620;
+}
+
+.exam-box .radio input[type=radio]:checked ~ .check {
+    background-color: #ca261f;
+}
+
+.exam-box ul {
+    padding: 20px;
+}
+
+.exam-box ul li {
+    list-style: none;
+}
+
+.exam-box ul li label {
+    color: #333 !important;
+    font: 18px !important;
+}
+
+.timer-div {
+    font-size: 18px;
+}
+
+.question{
+  display:none
+}
+
+.active{
+  display:block
+}
+
+.about-blk h1, .about-blk p, .about-blk h3,  .about-blk h2 {
+    font-family: 'roboto_slabregular';
+    color: #000;
+}
+
+.about-blk h1 {
+    font-size: 3.3em;
+    line-height: 180%;
+}
+
+.about-blk p {
+    font-size: 1.2em;
+    line-height: 180%;
+    margin: 20px 0 !important;
+}
+
+.instruction-blk {
+    padding: 20px 50px;
+}
+
+.instruction-blk ul li {
+    list-style: disc;
+    margin: 15px 0 !important;
+    font-size: 1.2em;
+}
+
+.result-table {
+    padding: 5% 0;
+}
+
+.result-table table {
+    margin: 0 auto;
+    color: #000;
+    font-size: 1.5em;
+}
+
+.result-table table td {
+   padding: 10px 20px;
+}
+
+.card-signup .card-content {
+    padding: 0px 30px 0px 30px;
+}
+
+.input-group .input-group-addon {
+    padding: 6px 5px 0px;
+}
+
+.dashboard-page .red-bg {
+    background: #e31d1ac4;
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+}
+
+.dashboard-page .grey-bg {
+    background: #302b27b5;
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+}
+
+.dash-wrapper {
+    padding: 0 15px;
+}
+
+h2.dash-title {
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    font-family: 'roboto_slabregular';
+    padding: 15px !important;
+}
+
+h2.dash-title button, 
+h2.dash-title button:hover,
+h2.dash-title button:focus, 
+h2.dash-title button:active  {
+    background: transparent;
+    box-shadow: none;
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    font-family: 'roboto_slabregular';
+    border: 0;
+}
+
+.img-box i {
+    font-size: 10em;
+}
+
+.dash-content.text-center {
+    color: #fff;
+    padding: 15px;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.grey-bg .dash-content {
+    margin-top: 15.8%;
+    margin-bottom: 20%;
+}
+
+.dash-content h2 {
+    font-family: 'roboto_slabregular';
+    margin: 15% 0 !important;
+}
+
+.dash-content button.btn.btn-white.btn-round {
+    color: #000000;
+}
+
+.dashboard-page .container-fluid {
+    background: url(../../assets/img/dash-bg-logo.png) no-repeat;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 50% 50%;
+    background-size: 40%;
+}
+
+.table-box .form-group.form-group-sm {
+    margin: 0 0 0 0;
+}
+
+.list-page {
+    background: #d1d1d1;
+}
+
+.list-page table {
+    background: #fff;
+}
+
+.list-page h2.dash-title {
+    color: #000;
+    font-family: 'roboto_slabregular';
+}
+
+.list-page label {
+    color: #000000;
+}
+
+.list-page .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #eaeaea;
+}
+
+.table-box table tr th {
+    background-color: #fa4251;
+    color: #fff;
+}
+
+.list-page .pagination > .active > a { 
+    background-color: #fa4251;
+    border-color: #fa4251;
+}
+
+.list-page .form-control {
+    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#000000, #000000);
+}
+*/
