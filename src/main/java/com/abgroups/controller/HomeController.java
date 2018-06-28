@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.abgroups.model.Candidate;
 import com.abgroups.service.RegistrationService;
+import com.abgroups.utils.ConstantMessage;
 import com.abgroups.utils.ConstantURL;
 import com.abgroups.utils.IConstant;
 
@@ -50,12 +51,33 @@ public class HomeController {
 		
 		Candidate candidateResult=service.saveCandidateRegistration(candidate);
 		if(candidateResult!=null){
-			session.setAttribute(IConstant.USER_SESSION, candidateResult.getCandidateEmail());
-			return  ConstantURL.VIEW_INSTRUCTION_URL;	
+			session.setAttribute(ConstantURL.CANDIDATE_EMAIL_SESSION, candidateResult.getEmail());
+			session.setAttribute(ConstantURL.CANDIDATE_NAME_SESSION, candidateResult.getCandidateName());
+			return REDIRECT+ ConstantURL.VIEW_INSTRUCTION_URL;	
 		}
 		return ConstantURL.VIEW_REGISTRATION_URL;
 	}
 	
-
+	@RequestMapping(value="candidateLogin",method=RequestMethod.GET)
+	public String showLogin(Model model){
+		Candidate candidate = new Candidate();
+		model.addAttribute("candidate", candidate);
+		return ConstantURL.VIEW_LOGIN_URL;
+	}
 	
+	
+	@RequestMapping(value = "candidateLogin", method = RequestMethod.POST)
+	public String loginProcess(@ModelAttribute("candidate") Candidate candidate, Model model, HttpServletRequest request) {
+		HttpSession session =request.getSession();
+		
+		Candidate candidateResult=service.findByCandidateEmailAndCandidatePassword(candidate);
+		logger.info("candidateLogin >>>>>>"+candidateResult);
+		if(candidateResult!=null){
+			session.setAttribute(ConstantURL.CANDIDATE_EMAIL_SESSION, candidateResult.getEmail());
+			session.setAttribute(ConstantURL.CANDIDATE_NAME_SESSION, candidateResult.getCandidateName());
+			return REDIRECT+ ConstantURL.VIEW_INSTRUCTION_URL;	
+		}
+		session.setAttribute("errmessage", ConstantMessage.CANDIDATE_LOGIN_FAIL);
+		return ConstantURL.VIEW_LOGIN_URL;
+	}
 }

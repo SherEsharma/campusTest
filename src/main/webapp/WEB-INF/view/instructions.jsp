@@ -21,7 +21,7 @@
 <% Object candidateID=session.getAttribute("candidateEmail"); 
 if(candidateID==null){
 	
-	response.sendRedirect("candidateLogin.jsp");
+	response.sendRedirect("candidateLogin");
 }
 else{
 	response.setHeader("Pragma","no-cache"); // HTTP 1.0
@@ -67,8 +67,8 @@ else{
 						<!-- =============== card-header End ================= -->
 						<!-- =============== card-content start ================= -->	
 						<div class="card-content exam-box">
-						<%-- <%Object candidateName=session.getAttribute("candidateName");  %>
-						Welcome  <B><%=candidateName %></B> --%>
+						 <%Object candidateName=session.getAttribute("candidateName");  %>
+						Welcome  <B><%=candidateName %></B> 
 					
 						<!-- =============== Instruction Start ================= -->
 							<div class="instruction-blk">

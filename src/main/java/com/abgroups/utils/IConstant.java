@@ -36,8 +36,7 @@ public class IConstant {
 		public static final String HIBERNATE_FORMAT_SQL = "hibernate.format_sql";
 		public static final String HIBERNATE_HBM2DDL = "hibernate.hbm2ddl.auto";
 		
-		// user session
-		public static final String USER_SESSION = "candidateEmail";
+		
 
 
 		

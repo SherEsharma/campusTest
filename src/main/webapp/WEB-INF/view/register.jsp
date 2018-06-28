@@ -131,8 +131,8 @@
 												class="material-icons">email</i>
 											</span>
 											<div class="form-group is-empty">
-												<form:input path="candidateEmail" class="form-control"
-													name="candidateEmail" placeholder="Enter Your Email Id"
+												<form:input path="email" class="form-control"
+													name="email" placeholder="Enter Your Email Id"
 													data-validation="email" onchange="check(this.value);" />
 												<font color="red"><div id="mydiv"></div></font> <span
 													class="material-input"></span>
@@ -147,7 +147,7 @@
 												class="material-icons">lock_outline</i>
 											</span>
 											<div class="form-group is-empty">
-												<form:password path="candidatePassword"
+												<form:password path="password"
 													name="candidatePassword" placeholder="Enter Password"
 													class="form-control" data-validation="strength"
 													data-validation-strength="6" />
@@ -306,7 +306,7 @@
 						</form:form>
 
 						<div class="card-action text-center gray">
-							<a href="candidateLogin.jsp" class="red">Login Here</a>
+							<a href="candidateLogin.php" class="red">Login Here</a>
 						</div>
 					</div>
 				</div>

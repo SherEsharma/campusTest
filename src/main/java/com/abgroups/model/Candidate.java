@@ -35,12 +35,28 @@ public class Candidate implements Serializable {
 
 	@Email
 	@Column(name="candidat_email", unique=true)
-	private String candidateEmail;
+	private String email;
 	
 	@Column(name="candidate_password")
-	private String candidatePassword;
+	private String password;
 	
 	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Column(name="candidate_exp")
 	private String candidateExp;
 	
@@ -89,23 +105,7 @@ public class Candidate implements Serializable {
 		this.candidateContactNo = candidateContactNo;
 	}
 
-	public String getCandidateEmail() {
-		return candidateEmail;
-	}
-
-	public void setCandidateEmail(String candidateEmail) {
-		this.candidateEmail = candidateEmail;
-	}
-
-	public String getCandidatePassword() {
-		return candidatePassword;
-	}
-
-	public void setCandidatePassword(String candidatePassword) {
-		this.candidatePassword = candidatePassword;
-	}
-
-	public String getCandidateExp() {
+		public String getCandidateExp() {
 		return candidateExp;
 	}
 
@@ -185,11 +185,11 @@ public class Candidate implements Serializable {
 	@Override
 	public String toString() {
 		return "Candidate [candidateId=" + candidateId + ", candidateName=" + candidateName + ", candidateContactNo="
-				+ candidateContactNo + ", candidateEmail=" + candidateEmail + ", candidatePassword=" + candidatePassword
-				+ ", candidateExp=" + candidateExp + ", candidateCampus=" + candidateCampus + ", candidateUnitersity="
-				+ candidateUnitersity + ", candidateAddress=" + candidateAddress + ", candidateState=" + candidateState
-				+ ", candidateCity=" + candidateCity + ", candidateCategory=" + candidateCategory
-				+ ", candidatePassoutYear=" + candidatePassoutYear + ", candidateStatus=" + candidateStatus + "]";
+				+ candidateContactNo + ", email=" + email + ", password=" + password + ", candidateExp=" + candidateExp
+				+ ", candidateCampus=" + candidateCampus + ", candidateUnitersity=" + candidateUnitersity
+				+ ", candidateAddress=" + candidateAddress + ", candidateState=" + candidateState + ", candidateCity="
+				+ candidateCity + ", candidateCategory=" + candidateCategory + ", candidatePassoutYear="
+				+ candidatePassoutYear + ", candidateStatus=" + candidateStatus + "]";
 	}
 	
 	
