@@ -7,7 +7,7 @@
 <html>
 <head>
 <title>Online Test | Xenture</title>																															
-<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="shortcut icon" type="image/png" href="resources/assets/img/favicon.png" />
 
 <meta charset="UTF-8">
 <meta name="description" content="smart recuritment,job search">
@@ -16,14 +16,14 @@
 <meta name="author" content="Trabaajo">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" type="text/css" href="assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="resources/assets/css/generic.css">
 <link rel="stylesheet" type="text/css"
-	href="assets/css/bootstrap.min.css">
+	href="resources/assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="assets/css/material-k	it.css">
+	href="resources/assets/css/material-k	it.css">
 <link rel="stylesheet" type="text/css"
-	href="assets/css/bootstrap-custom.css">
-<link rel="stylesheet" type="text/css" href="assets/css/media.css">
+	href="resources/assets/css/bootstrap-custom.css">
+<link rel="stylesheet" type="text/css" href="resources/assets/css/media.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
 </head>
@@ -31,7 +31,7 @@
 
 <% 
 
-Object candidateID=session.getAttribute("candidateEmailId"); 
+Object candidateID=session.getAttribute("candidateEmail"); 
 if(candidateID==null){
 	response.sendRedirect("candidateLogin.jsp");
 }
@@ -41,7 +41,7 @@ else{
 	response.setHeader("Cache-Control","no-store"); // HTTP 1.1
 	response.setDateHeader("Expires", 0);
 	%>
-
+ 
 
 <body class="login-page">
 	<!-- =============== header start ================= -->
@@ -55,7 +55,7 @@ else{
 							class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#"> <img
-						src="assets/img/logo.png" alt="logo">
+						src="resources/assets/img/logo.png" alt="logo">
 					</a>
 				</div>
 			</div>
@@ -201,13 +201,13 @@ else{
 	</div>
 	<!-- =============== page-header end ================= -->
 
-	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/custom.js"></script>
-	<script type="text/javascript" src="assets/js/material.min.js"></script>
-	<script type="text/javascript" src="assets/js/material-kit.js"></script>
-	<script type="text/javascript" src="assets/js/nouislider.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="resources/assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/custom.js"></script>
+	<script type="text/javascript" src="resources/assets/js/material.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/material-kit.js"></script>
+	<script type="text/javascript" src="resources/assets/js/nouislider.min.js"></script>
+	<script type="text/javascript" src="resources/assets/js/bootstrap-datepicker.js"></script>
 	<script>
 	/* ================= timer Js ===================== */
 	document.getElementById('timer').innerHTML =
@@ -241,4 +241,4 @@ else{
 </body>
 </html>
 
-<% }%>
+<% }%> 

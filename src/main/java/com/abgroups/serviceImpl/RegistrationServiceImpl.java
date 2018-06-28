@@ -36,11 +36,17 @@ public class RegistrationServiceImpl implements RegistrationService {
 
 	@Override
 	public Candidate findByCandidateEmailAndCandidatePassword(Candidate registration) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stubr
+		Candidate login=null;
 		logger.info("check in method >>>>>>>>>"+registration.getEmail()+ registration.getPassword());
-		Candidate login = repo.findByEmailAndPassword(registration.getEmail(), registration.getPassword());
-
+		try{
+		 login = repo.findByEmailAndPassword(registration.getEmail(), registration.getPassword());
 		logger.info("After login" + login);
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			logger.error("someThing error", e);
+		}
 		return login;
 	}
 

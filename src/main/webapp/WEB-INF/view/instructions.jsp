@@ -83,7 +83,7 @@ else{
 							<!-- =============== Instruction End =================== -->
 							<!-- =============== Start Test Start ================= -->
 							<div class="footer text-center">
-								<a href="ViewAllQuestion" class="btn btn-primary btn-round btn-wd btn-lg next">	
+								<a href="startExam.php" class="btn btn-primary btn-round btn-wd btn-lg next">	
 									Start Test
 								</a>
 							</div>
