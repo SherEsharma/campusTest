@@ -25,6 +25,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 		} catch (Exception e) {
 			logger.error("Data not save", e);
 		}
+		logger.info("Data suceessfully save"+candidateSave);
 		return candidateSave;
 	}
 

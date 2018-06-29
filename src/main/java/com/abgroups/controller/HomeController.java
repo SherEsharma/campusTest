@@ -50,6 +50,7 @@ public class HomeController {
 		HttpSession session =request.getSession();
 		
 		Candidate candidateResult=service.saveCandidateRegistration(candidate);
+		logger.info("In controller we check value of candidateResute"+candidateResult);
 		if(candidateResult!=null){
 			session.setAttribute(ConstantURL.CANDIDATE_EMAIL_SESSION, candidateResult.getEmail());
 			session.setAttribute(ConstantURL.CANDIDATE_NAME_SESSION, candidateResult.getCandidateName());
