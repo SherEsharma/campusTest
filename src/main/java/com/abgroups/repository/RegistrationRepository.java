@@ -10,6 +10,5 @@ import com.abgroups.model.Candidate;
 
 public interface RegistrationRepository extends JpaRepository<Candidate, Integer> {
 	
-	
 	Candidate findByEmailAndPassword(String candidateEmailId, String candidatePassword);
 }
