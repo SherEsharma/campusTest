@@ -11,7 +11,9 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
-
+import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
+import org.springframework.web.servlet.view.tiles3.TilesView;
+import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 import com.abgroups.utils.IConstant;
  
@@ -39,6 +41,34 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 	viewResolver.setPrefix(IConstant.JSP_PACKAGE);
 	viewResolver.setSuffix(IConstant.JSP_EXTANTION);
 	return viewResolver;
+	}
+	
+	/**
+	 * Resolves views selected for rendering by @Controllers to tiles resources
+	 * in the Apache TilesConfigurer bean
+	 */
+	@Bean
+	public TilesViewResolver getTilesViewResolver() {
+		System.out.println("in getTilesViewResolver ...........................");
+		TilesViewResolver tilesViewResolver = new TilesViewResolver();
+		tilesViewResolver.setViewClass(TilesView.class);
+
+		return tilesViewResolver;
+	}
+	
+	/**
+	 * Configures Apache tiles definitions bean used by Apache TilesViewResolver
+	 * to resolve views selected for rendering by @Controllers
+	 */
+	@Bean
+	public TilesConfigurer getTilesConfigure() {
+		System.out.println("getTilesConfigure ...........................");
+		TilesConfigurer tilesConfigurer = new TilesConfigurer();
+		tilesConfigurer.setCheckRefresh(true);
+		tilesConfigurer.setDefinitionsFactoryClass(TilesDefinitionsConfig.class);
+		TilesDefinitionsConfig.addDefinitions();
+
+		return tilesConfigurer;
 	}
 }
 	

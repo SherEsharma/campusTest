@@ -24,11 +24,18 @@ public class ExamController {
 	
 	@RequestMapping(value="startExam",method=RequestMethod.GET)
 	public String showCommonExam(Model model){
+		Objective objective = new Objective();
 		List<Objective> list=exam.getAllQuestionResoning();
-		logger.info("Show question   ::  "+ list);
-		
-		model.addAttribute("", list);
+		logger.info("Show question   ::  "+ list.size());
+		model.addAttribute("objective", objective);
+		model.addAttribute("list", list);
 		return ConstantURL.VIEW_COMMON_EXAM_URL;	
+	}
+	
+	@RequestMapping(value="resultgenerate",method=RequestMethod.POST)
+	public String resultgenerate(Model model, Objective objective){
+		logger.info("After question submit"+objective);
+		return ConstantURL.VIEW_EXAM_RESULT_URL;
 	}
 	
 

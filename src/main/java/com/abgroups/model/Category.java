@@ -20,20 +20,66 @@ public class Category implements Serializable {
 	@Column(name = "categor_id")
 	private Integer categoryId;
 	
+	
+	@Column(name="category_name",unique=true)
+	private String categoryName;
+	
 	@Override
 	public String toString() {
-		return "Category [categoryId=" + categoryId + ", categortName=" + categortName + ", isActiveCategory="
-				+ isActiveCategory + ", isDeleteCategory=" + isDeleteCategory + "]";
+		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + ", isActiveCategory="
+				+ isActiveCategory + ", isDeleteCategory=" + isDeleteCategory + ", categoryType=" + categoryType + "]";
 	}
 
-	@Column(name="category_name",unique=true)
-	private String categortName;
 	
+	
+	public String getCategoryName() {
+		return categoryName;
+	}
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
 	@Column(name="is_active_category")
 	private Integer isActiveCategory;
 	
 	@Column(name="is_delete_category")
 	private Integer isDeleteCategory;
+	/*
+	 * Category 1 :  Objective category
+	 * Category 2 :  Subjective category
+	 * 
+	 */
+	@Column(name="category_type")
+	private Integer categoryType;
+
+	public Integer getCategoryId() {
+		return categoryId;
+	}
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public Integer getIsActiveCategory() {
+		return isActiveCategory;
+	}
+	public void setIsActiveCategory(Integer isActiveCategory) {
+		this.isActiveCategory = isActiveCategory;
+	}
+	public Integer getIsDeleteCategory() {
+		return isDeleteCategory;
+	}
+	public void setIsDeleteCategory(Integer isDeleteCategory) {
+		this.isDeleteCategory = isDeleteCategory;
+	}
+	public Integer getCategoryType() {
+		return categoryType;
+	}
+	public void setCategoryType(Integer categoryType) {
+		this.categoryType = categoryType;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
 	
 

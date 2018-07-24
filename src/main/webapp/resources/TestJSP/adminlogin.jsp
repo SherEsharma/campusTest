@@ -1,14 +1,9 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
 <!-- shuh -->
 	<title>Login | Xenture</title>
-	<link rel="shortcut icon" type="image/png" href="resources/assets/img/favicon.png" />
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
 
 	<meta charset="UTF-8">
 	<meta name="description" content="smart recuritment,job search">
@@ -16,11 +11,11 @@
 	<meta name="author" content="Trabaajo">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 
-	<link rel="stylesheet" type="text/css" href="resources/assets/css/generic.css">
-	<link rel="stylesheet" type="text/css" href="resources/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="resources/assets/css/material-kit.css">
-	<link rel="stylesheet" type="text/css" href="resources/assets/css/bootstrap-custom.css">
-	<link rel="stylesheet" type="text/css" href="resources/assets/css/media.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/generic.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/material-kit.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-custom.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/media.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="login-page">
@@ -35,7 +30,7 @@
 						<span class="icon-bar"></span>                        
 					</button>
 					<a class="navbar-brand" href="#">
-						<img src="resources/assets/img/logo.png" alt="logo">
+						<img src="assets/img/logo.png" alt="logo">
 					</a>
 				</div>
 			</div>
@@ -50,12 +45,12 @@
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 					<div class="card card-signup">
-						<form:form class="form" method="POST" action="adminlogin" modelAttribute="admin">
+						<form class="form" method="POST" action="AdminControllers">
 							<div class="header header-primary header-primary-custom text-center">
 								<h4 class="card-title">Admin Login</h4>
 							</div>
 							
-	<%-- <%  String errormsg = (String) session.getAttribute("errormsg");
+	<%  String errormsg = (String) session.getAttribute("errormsg");
     if (errormsg == null) 
     {
     	errormsg = null;
@@ -81,7 +76,7 @@
     <%
      }
       request.getSession().removeAttribute("errormsg");
-    %> --%>
+    %>
     																		
 							<div class="card-content">
 								<div class="input-group">
@@ -89,7 +84,7 @@
 										<i class="material-icons">email</i>
 									</span>
 									<div class="form-group is-empty">
-										<form:input path="email" name="adminEmail" class="form-control" placeholder="Email..." required="required" onchange="check(this.value);"/>
+										<input type="text" name="adminEmail" class="form-control" placeholder="Email..." required="required" onchange="check(this.value);">
 										<span class="material-input"></span>
 									</div>
 								</div>
@@ -99,7 +94,7 @@
 										<i class="material-icons">lock_outline</i>
 									</span>
 									<div class="form-group is-empty">
-										<form:password path="password" name="password" placeholder="Password..." class="form-control" required="required"/>
+										<input type="password" name="password" placeholder="Password..." class="form-control" required="required">
 										<span class="material-input"></span>
 									</div>
 								</div>
@@ -109,7 +104,7 @@
 									<button type="submit" class="btn btn-primary btn-round btn-wd btn-lg">Login</button>
 								</div>
 							</div>
-						</form:form>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -130,12 +125,12 @@
 		<!-- ./footer end -->
 	</div>
 
-	<script type="text/javascript" src="resources/assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="resources/assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="resources/assets/js/custom.js"></script>
-	<script type="text/javascript" src="resources/assets/js/material.min.js"></script>
-	<script type="text/javascript" src="resources/assets/js/material-kit.js"></script>
-	<script type="text/javascript" src="resources/assets/js/nouislider.min.js"></script>
-	<script type="text/javascript" src="resources/assets/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script type="text/javascript" src="assets/js/material.min.js"></script>
+	<script type="text/javascript" src="assets/js/material-kit.js"></script>
+	<script type="text/javascript" src="assets/js/nouislider.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Thank-You | Xenture</title>
+
+	<title>Instruction | Xenture</title>
 	<link rel="shortcut icon" type="image/png" href="resources/assets/img/favicon.png" />
 
 	<meta charset="UTF-8">
@@ -17,26 +18,20 @@
 	<link rel="stylesheet" type="text/css" href="resources/assets/css/media.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <% Object candidateID=session.getAttribute("candidateEmail"); 
 if(candidateID==null){
+	
 	response.sendRedirect("candidateLogin");
 }
 else{
-	 Object candidateName=session.getAttribute("candidateName");  
-	 Object startTime=session.getAttribute("startTime");
-	 Object endTime=session.getAttribute("endTime");
-	 Object FirstScore=session.getAttribute("FirstScore");
-	 Object SecondScore=session.getAttribute("SecondScore");
-	 
-	 
-	 Object candidateId=session.getAttribute("candidateID");
-	 
-	 
-	 %> 
-	
-<body class="login-page">
+	response.setHeader("Pragma","no-cache"); // HTTP 1.0
+	response.setHeader("Cache-Control","no-store"); // HTTP 1.1
+	response.setDateHeader("Expires", 0);
+	%>
 
+
+<body class="login-page">
+	<!-- =============== header start ================= -->
 	<header>
 		<nav class="navbar navbar-primary navbar-transparent navbar-absolute">
 			<div class="container">
@@ -53,59 +48,58 @@ else{
 			</div>
 		</nav>
 	</header> 
-	<!-- ./header end -->
+	<!-- =============== header end ================= -->
 
-	<!-- ./header start -->
+	<!-- =============== page-header start ================= -->
 	<div class="body-bg page-header header-filter">
-		<!-- ./section start -->
+		<!-- =============== section start ================= -->
 		<section class="container">
-			<div class="row text-center">
-				<div class="col-md-12 col-sm-12 col-xs-12 about-blk">
-					<h1>Thank You !</h1>
-					<div class="table-responsive text-left result-table">
-						<table>
-							<tbody>
-								<tr>
-									<td>Candidate Id :</td>
-									<td><%=candidateId %></td>
-								</tr>
-								<tr>
-									<td>Candidate Name :</td>
-									<td><%=candidateName %></td>
-								</tr>
-								<tr>
-									<td>Your Starting Time :</td>
-									<td><%=startTime %></td>
-								</tr>
-								<tr>
-									<td>Your End Time :</td>
-									<td><%=endTime %></td>
-								</tr>
-								<tr>
-									<td>Number Of Questions in 1st Test :</td>
-									<td>20</td>
-								</tr>
-								<tr>
-									<td>First test score :</td>
-									<td><%=FirstScore %></td>
-								</tr>
-								<tr>
-									<td>Number Of Questions 2nd Test :</td>
-									<td>20</td>
-								</tr> 
-								<tr>
-									<td>Second test score :</td>
-									<td><%=SecondScore %></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>					
+			<!-- =============== row start ================= -->
+			<div class="row">
+				<!-- =============== col-md-12 Start ================= -->
+				<div class="col-md-12">
+					<!-- =============== card start ================= -->
+					<div class="card card-signup">
+						<!-- =============== card-header start ================= -->
+						<div class="header header-primary header-primary-custom text-center">
+							<h4 class="card-title">Instructions For Exams</h4>
+						</div>
+						<!-- =============== card-header End ================= -->
+						<!-- =============== card-content start ================= -->	
+						<div class="card-content exam-box">
+						 <%Object candidateName=session.getAttribute("candidateName");  %>
+						Welcome  <B><%=candidateName %></B> 
+					
+						<!-- =============== Instruction Start ================= -->
+							<div class="instruction-blk">
+								<ul>
+									<li>This is a 15 minute test comprising of 20 questions.</li>
+									<li>Each question carries 1 mark.There is no negative marking.</li>
+									<li>Do not press <strong>BACK</strong> or <strong>REFRESH</strong>.If logged out, your test would end immediately and you will be dismissed.</li>
+									<li>Do not use any kind of reference. The shortest time taken can also help you fetch a job.</li>
+								</ul>
+								<h4 class="text-center text-uppercase mrg5">All the best !!</h4> 
+							</div>
+							<!-- =============== Instruction End =================== -->
+							<!-- =============== Start Test Start ================= -->
+							<div class="footer text-center">
+								<a href="startExam.php" class="btn btn-primary btn-round btn-wd btn-lg next">	
+									Start Test
+								</a>
+							</div>
+							<!-- =============== Start Test End ================= -->
+						</div>
+						<!-- =============== card-content End ================= -->
+					</div>
+					<!-- =============== card End ================= -->
 				</div>
+				<!-- =============== col-md-12 End ================= -->
 			</div>
+			<!-- =============== row End ================= -->
 		</section>
-		<!-- ./section body end -->
+		<!-- =============== section end ================= -->
 
-		<!-- ./footer start -->
+		<!-- =============== footer start ================= -->
 		<footer class="footer">
 	        <div class="container">
 	            <div class="copyright">
@@ -116,8 +110,9 @@ else{
 	            </div>
 	        </div>
 	    </footer>
-		<!-- ./footer end -->
+		<!-- =============== footer end ================= -->
 	</div>
+	<!-- =============== page-header end ================= -->
 
 	<script type="text/javascript" src="resources/assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="resources/assets/js/bootstrap.min.js"></script>
@@ -128,9 +123,5 @@ else{
 	<script type="text/javascript" src="resources/assets/js/bootstrap-datepicker.js"></script>
 </body>
 </html>
-
-
-<% 
-session.invalidate();
-/* response.sendRedirect("startpage.html"); */
-} %> 
+<% }
+%>

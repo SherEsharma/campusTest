@@ -8,6 +8,12 @@ public class ConstantMessage {
 	public static final String CANDIDATE_LOGIN_FAIL="Please Enter EmailId/password Properly";
 	
 	
+	//Suceess and Error message for Admin
+	
+		
+		public static final String CATEGORY_ADD_SUCCESS="category successfully added";
+		public static final String CATEGORY_ADD_UNSUCCESS="Opps ! category not added";
+		
 
 	
 }

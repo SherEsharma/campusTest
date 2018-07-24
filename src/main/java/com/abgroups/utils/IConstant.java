@@ -1,5 +1,5 @@
 package com.abgroups.utils;
-
+import org.apache.tiles.Attribute;
 public class IConstant {
 	public static final Byte INT_ONE = 1;
 	 public static final String DISPATCHER_SERVLET_NAME="dispatcher";
@@ -15,8 +15,8 @@ public class IConstant {
 		public static final String JSP_PACKAGE = "/WEB-INF/view/";
 		public static final String RECRUITER_HEADER = "/WEB-INF/layout/header.jsp";
 		public static final String RECRUITER_FOOTER = "/WEB-INF/layout/footer.jsp";
-		public static final String RECRUITER_MENU = "/WEB-INF/layout/menu.jsp";
 		public static final String JSP_EXTANTION = ".jsp";
+		public static final Attribute BASE_TEMPLATE = new Attribute("/WEB-INF/layout/defaultLayout.jsp");
 		
 		
 		
